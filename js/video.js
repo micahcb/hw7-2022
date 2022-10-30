@@ -13,6 +13,7 @@ window.addEventListener("load", function() {
 document.querySelector("#play").addEventListener("click", function() {
 	console.log("Play Video");
 	video.play()
+	document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
 });
 
 document.querySelector("#pause").addEventListener("click", function() {
@@ -70,7 +71,6 @@ document.querySelector("#mute").addEventListener("click", function() {
 );
 
 //Change the volume based on the slider and update the volume information.
-document.querySelector("#volume").innerHTML = video.volume * 100 + "%";
 
 
 document.querySelector("#slider").addEventListener("change", function() {
